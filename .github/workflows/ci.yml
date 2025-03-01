@@ -26,10 +26,10 @@ jobs:
           cache: "yarn"
           cache-dependency-path: './frontend'
 
-      - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
-      - name: Linting check
-        run: cd frontend && yarn lint
+      # - name: Install Node.js dependencies
+      #   run: yarn install --frozen-lockfile
+      - name: Install Node.js dependencies and Linting check
+        run: cd frontend && yarn install --frozen-lockfile && yarn lint
       - name: Type check
         run: cd frontend && yarn type-check
       - name: Run tests and coverage
