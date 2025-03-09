@@ -19,6 +19,7 @@ export const TRot: React.FC = () => {
           <Input
             {...field}
             id="trot-input"
+            data-testid="trot-input"
             type="number"
             onChange={field.onChange}
             value={field.value}

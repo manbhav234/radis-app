@@ -19,6 +19,7 @@ export const TVib: React.FC = () => {
           <Input
             {...field}
             id="tvib-input"
+            data-testid="tvib-input"
             type="number"
             onChange={field.onChange}
             value={field.value}

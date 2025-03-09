@@ -5,14 +5,14 @@ import App from "../../../../src/App";
 describe("testing pressure field ", () => {
   test("testing pressure field render with defaultValue and perfectly visible", () => {
     render(<App />);
-    const input = screen.getByLabelText("Pressure");
+    const input = screen.getByTestId("pressure-input").querySelector("input");
     expect(input).toBeVisible();
     expect(input).toBeInTheDocument();
     expect(input).toHaveValue(1.01325);
   });
   test(" test pressure field render with user* given value and perfectly visible", () => {
     render(<App />);
-    const input = screen.getByLabelText("Pressure");
+    const input = screen.getByTestId("pressure-input").querySelector("input");
     expect(input).toBeVisible();
     expect(input).toBeInTheDocument();
     fireEvent.input(input, {
@@ -22,7 +22,7 @@ describe("testing pressure field ", () => {
   });
   test("testing pressure field validation for out of range values", async () => {
     render(<App />);
-    const input = screen.getByLabelText("Pressure");
+    const input = screen.getByTestId("pressure-input").querySelector("input");
     const button = screen.getByRole("button", {
       name: /new plot/i,
     });
@@ -38,7 +38,7 @@ describe("testing pressure field ", () => {
   });
   test("testing pressure field validation for undefined values", async () => {
     render(<App />);
-    const input = screen.getByLabelText("Pressure");
+    const input = screen.getByTestId("pressure-input").querySelector("input");
     const button = screen.getByRole("button", {
       name: /new plot/i,
     });
