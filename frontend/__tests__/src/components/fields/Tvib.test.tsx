@@ -1,7 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import React from "react";
+import { describe, test, expect } from "vitest";
+import "@testing-library/jest-dom";
 import App from "../../../../src/App";
+
 describe("testing tvib field ", () => {
   test("testing tvib rendered but not visible if non-equilibrium-switch* is not checked", () => {
     render(<App />);

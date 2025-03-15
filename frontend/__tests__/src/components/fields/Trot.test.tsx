@@ -1,9 +1,9 @@
 import { findByTestId, fireEvent, render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import React from "react";
+import { describe, test, expect } from "vitest";
+import "@testing-library/jest-dom";
 import App from "../../../../src/App";
-import userEvent from "@testing-library/user-event";
-import { checkbox } from "@material-tailwind/react";
 describe("testing trot field ", () => {
   test("testing trot rendered but not visible if non-equilibrium-switch* is not checked", () => {
     render(<App />);

@@ -1,7 +1,10 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import React from "react";
+import { describe, test, expect } from "vitest";
+import "@testing-library/jest-dom";
 import App from "../../../../src/App";
+
 describe("testing pressure field ", () => {
   test("testing pressure field render with defaultValue and perfectly visible", () => {
     render(<App />);
@@ -10,7 +13,7 @@ describe("testing pressure field ", () => {
     expect(input).toBeInTheDocument();
     expect(input).toHaveValue(1.01325);
   });
-  test(" test pressure field render with user* given value and perfectly visible", () => {
+  test("test pressure field render with user* given value and perfectly visible", () => {
     render(<App />);
     const input = screen.getByTestId("pressure-input").querySelector("input");
     expect(input).toBeVisible();

@@ -1,7 +1,10 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import React from "react";
+import { describe, test, expect } from "vitest";
+import "@testing-library/jest-dom";
 import App from "../../../../src/App";
+
 describe("testing tgas field ", () => {
   test("testing tgas field render with defaultValue and perfectly visible", () => {
     render(<App />);
