@@ -58,7 +58,8 @@ export const formSchema = yup.object().shape({
       mole_fraction: yup
         .number()
         .required("Mole fraction must be defined")
-        .typeError("Mole fraction must be defined"),
+        .typeError("Mole fraction must be defined")
+        .min(0, "Mole fraction must be positive"),
     })
   ),
   simulate_slit: yup
